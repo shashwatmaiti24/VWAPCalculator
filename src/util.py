@@ -10,7 +10,7 @@ if not os.path.exists(directory):
 
 def output_vwap(executed_orders, stock_names, curr_time):
     FlagBearer.prev_time = (curr_time // 1000000000) * 1000000000
-    print('It is now ', str((FlagBearer.prev_time // 3.6e11) / 10), 'hours from midnight')
+    print('Time from midnight: ', str((FlagBearer.prev_time // 3.6e11) / 10), 'hours')
     for locate_id, trades in executed_orders.items():
         low = 0
         high = 0
